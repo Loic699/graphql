@@ -1,0 +1,15 @@
+<div *ngIf="launches$ | async as launches">
+    <div *ngFor="let launch of launches" id="tableau">
+        <p>{{launch.rocket.rocket_name}}
+            <br>
+            {{launch.launch_date_local}}
+            <br>
+            {{launch.launch_success}}
+            <br>
+            <a href="{{launch.links.video_link}}">vidéo</a>
+            <br>
+            {{launch.details}}
+        </p>
+    </div>
+
+</div>
